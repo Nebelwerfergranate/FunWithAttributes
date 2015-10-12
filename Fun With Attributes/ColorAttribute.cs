@@ -5,19 +5,26 @@ namespace Fun_With_Attributes
     [AttributeUsage(AttributeTargets.Property)]
     class ColorAttribute : Attribute
     {
+        // Fields
+        private ConsoleColor propertyColor;
+
+
         // Constructors
         public ColorAttribute()
         {
-            Color = ConsoleColor.White;
+            propertyColor = ConsoleColor.White;
         }
 
-        public ColorAttribute(ConsoleColor color)
+        public ColorAttribute(ConsoleColor propertyColor)
         {
-            Color = color;
+            this.propertyColor = propertyColor;
         }
-
+ 
 
         // Properties
-        public ConsoleColor Color;
+        public ConsoleColor PropertyColor
+        {
+            get { return propertyColor;}
+        }
     }
 }

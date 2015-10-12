@@ -23,7 +23,7 @@ namespace Fun_With_Attributes
                 {
                     if (att is ColorAttribute)
                     {
-                        Console.ForegroundColor = ((ColorAttribute) att).Color;
+                        Console.ForegroundColor = ((ColorAttribute) att).PropertyColor;
                         Console.WriteLine(prop.GetValue(vegetable));
                         hasColorAttribute = true;
                     }
